@@ -12,7 +12,7 @@ This repository contains my solutions for the JavaScript programming exam from H
 ## Tasks and Solutions
 
 ### Task 1: Modern Art Maker
-- **File:** `oppgave1.html`
+- (Task1)[https://ensve.github.io/Eksamen-PGR102-Introduksjon-til-programmering-H2021-Flere-Oppgaver/oppgave1.html]
 - **Description:** Allows users to create their own modern art by adding colored boxes with specified dimensions and positions on the webpage. Users can also clear the screen to start new creations.
 
 ### Task 2: Dragracing
