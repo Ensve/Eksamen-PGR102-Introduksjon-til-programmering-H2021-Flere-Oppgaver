@@ -12,20 +12,20 @@ This repository contains my solutions for the JavaScript programming exam from H
 ## Tasks and Solutions
 
 ### Task 1: Modern Art Maker
-- (Task1)[https://ensve.github.io/Eksamen-PGR102-Introduksjon-til-programmering-H2021-Flere-Oppgaver/oppgave1.html]
+- [Task 1](https://ensve.github.io/Eksamen-PGR102-Introduksjon-til-programmering-H2021-Flere-Oppgaver/oppgave1.html)
 - **Description:** Allows users to create their own modern art by adding colored boxes with specified dimensions and positions on the webpage. Users can also clear the screen to start new creations.
 
 ### Task 2: Dragracing
-- **File:** `oppgave2.html`
+- [Task 2](https://ensve.github.io/Eksamen-PGR102-Introduksjon-til-programmering-H2021-Flere-Oppgaver/oppgave2.html)
 - **Description:** A simulation of a drag race where three cars compete. Cars move forward in random increments every two seconds until one crosses the finish line.
 
 ### Task 3: Medieval Real Estate Agent
-- **File:** `oppgave3.html`
+- [Task 3](https://ensve.github.io/Eksamen-PGR102-Introduksjon-til-programmering-H2021-Flere-Oppgaver/oppgave3.html)
 - **Description:** Displays medieval buildings and allows filtering by price range and category. Users can view details about each property and sort them according to their preferences.
 
 ### Task 4: Minibank Simulator
-- **File:** `oppgave4.html`
-- **Description:** A simple ATM simulator where users start with a balance and can withdraw money using a correct PIN code. The account balance updates visually with images representing the money.
+- [Task 4](https://ensve.github.io/Eksamen-PGR102-Introduksjon-til-programmering-H2021-Flere-Oppgaver/oppgave4-student2.html)
+- **Description:** A simple ATM simulator where users start with a balance and can withdraw money using a correct PIN code (1234). The account balance updates visually with images representing the money. 
 
 ## Installation
 To run these applications locally:
