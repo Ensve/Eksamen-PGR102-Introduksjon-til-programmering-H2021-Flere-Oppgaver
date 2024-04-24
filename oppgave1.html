@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 1</title>
+    <link rel="stylesheet" type="text/css" href="css/oppgave1.css">
+</head>
+<body>
+
+    <!-- Det er lov å endre/legge til HTML -->
+
+    <h1>Modern Art Maker</h1>
+
+    <label>Bredde</label>    
+    <input id="width-txt" type="text">
+
+    <label>Høyde</label>
+    <input id="height-txt" type="text">
+
+    <hr>
+
+    <label>Farge</label>
+    <input id="background-color-txt" type="text">
+
+    <hr>
+
+    <label>Posisjon fra venstre (left)</label>
+    <input id="left-txt" type="text">
+
+    <label>Posisjon fra toppen (top)</label>
+    <input id="top-txt" type="text">
+
+    <hr>
+
+    <input id="add-box-btn" type="button" value="Legg til">
+
+    <p id="status-p">Antall bokser lagt til: </p>
+
+    <div id="output-div"></div>
+
+    <script>
+        var addDivsBtn = document.getElementById("add-box-btn");
+        var amountStatus = document.getElementById("status-p");
+        var outputDiv = document.getElementById("output-div");
+
+        /*
+            Inputene for å stilsette div'ene
+        */
+       var inputWidthTxt = document.getElementById("width-txt");
+       var inputHeightTxt = document.getElementById("height-txt");
+       var inputColorTxt = document.getElementById("background-color-txt");
+       var inputLeftPosTxt = document.getElementById("left-txt");
+       var inputTopPosTxt = document.getElementById("top-txt");
+
+       /*
+        eventlistner for addDivsBtn som kjører funksjonen addNew når den blir klikket
+       */
+       addDivsBtn.addEventListener("click", addNew);
+
+       /*
+        Array som divene som nlir opprettet pushes inni.. (husk å printe ut antall div!!)
+       */
+       var amountDivsArr = [];
+       var amountDivs = amountDivsArr.length;
+       
+       function addNew() {
+        amountStatus.innerHTML = "";
+        // lager divs og plasserer di inni outputDiv
+           var newDiv = document.createElement("div");
+           outputDiv.appendChild(newDiv);
+           console.log("click");
+           
+           // variabler som lagrer stylinginput
+           var width = inputWidthTxt.value;
+           var height = inputHeightTxt.value;
+           var color = inputColorTxt.value;
+           var left = inputLeftPosTxt.value;
+           var top = inputTopPosTxt.value;
+           
+           // styling av div ved å bruke inputvaluene
+           newDiv.style.width =  width + "px";
+           newDiv.style.height = height + "px";
+           newDiv.style.backgroundColor = color;
+           newDiv.style.left = left + "px";
+           newDiv.style.top = top + "px";
+           
+           // pushe nye divs inn i array
+           amountDivsArr.push(newDiv);
+           for(var i = 0; i < amountDivs; i++){
+               amountStatus.innerHTML += `${amountDivsArr[i]}`;
+           }
+       }
+
+    </script>
+    
+    </body>
+</html>

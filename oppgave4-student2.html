@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 4 - Minibank-simulator</title>
+</head>
+<body>
+    <h1>Sparebanken Kristiania</h1>
+
+    
+    <label for="uttak">Tast inn din 4 sifrede pinkode:</label>
+    <!-- Pinkoden er: 1234 -->
+    <input type="password" id="user-password">
+    <button type="button" onclick="validatePass()" id="submitBtn">Uttak</button>
+    <p id="saldo">Din saldo er:</p>
+    <div id="output-div"></div>
+
+    <script>
+        // HTML elementer
+        var passwordInput = document.getElementById("user-password");
+        var submitPassword = document.getElementById("submitPassword");
+        var outputDiv = document.getElementById("output-div");
+        var saldoElem = document.getElementById("saldo");
+
+        // Variabler
+        var correctPassword = "1234"; // Korrekt pinkode
+        var saldo = 2000; // Startsaldo på 2000 kroner
+
+        // Oppdater visuell saldo
+        updateVisualSaldo();
+
+        // Funksjoner
+        function validatePass() {
+            var userPassword = passwordInput.value;
+
+            if(userPassword === correctPassword){
+                withdrawMoney();
+            } else {
+                window.alert("Feil pinkode");
+            }
+        }
+
+        function withdrawMoney() {
+            var amountMoney = "Hvor mye penger ønsker du å ta ut?";
+            var amount = parseInt(prompt(amountMoney), 10);
+
+            if(amount <= saldo && (amount === 500 || amount === 1000 || amount === 1500 || amount === 2000)) {
+                saldo -= amount; // Trekker valgt beløp fra saldo
+                updateVisualSaldo();
+            } else {
+                window.alert("Ugyldig beløp eller ikke nok penger på konto.");
+            }
+
+            if(saldo === 0){
+                window.alert("Du har tatt ut alle pengene dine.");
+            }
+        };
+
+        // Visuell oppdatering av saldo
+        function updateVisualSaldo() {
+            saldoElem.textContent = `Din saldo er: ${saldo} kr`;
+            outputDiv.innerHTML = ""; // Tømmer div for å legge til oppdaterte bilder
+
+            // Beregn antall 500-lapper basert på saldo
+            var numFiveHundreds = saldo / 500;
+
+            for (let i = 1; i <= numFiveHundreds; i++) {
+                outputDiv.innerHTML += `<img src='./images/fem-hundre-kroner.png'/>`;
+            }
+        }
+
+       
+    </script>
+</body>
+</html>
