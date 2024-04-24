@@ -31,4 +31,4 @@ This repository contains my solutions for the JavaScript programming exam from H
 To run these applications locally:
 1. Clone this repository to your local machine using:
    ```bash
-   git clone [repository-url]
+   git clone [https://github.com/Ensve/Eksamen-PGR102-Introduksjon-til-programmering-H2021-Flere-Oppgaver.git]
